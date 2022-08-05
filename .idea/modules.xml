@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ijkplayer.iml" filepath="$PROJECT_DIR$/.idea/modules/ijkplayer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ijkplayer-example/ijkplayer.ijkplayer-example.iml" filepath="$PROJECT_DIR$/.idea/modules/ijkplayer-example/ijkplayer.ijkplayer-example.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ijkplayer-exo/ijkplayer.ijkplayer-exo.iml" filepath="$PROJECT_DIR$/.idea/modules/ijkplayer-exo/ijkplayer.ijkplayer-exo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ijkplayer-java/ijkplayer.ijkplayer-java.iml" filepath="$PROJECT_DIR$/.idea/modules/ijkplayer-java/ijkplayer.ijkplayer-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bilibliplayer.iml" filepath="$PROJECT_DIR$/.idea/modules/bilibliplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ijkplayer-example/bilibliplayer.ijkplayer-example.iml" filepath="$PROJECT_DIR$/.idea/modules/ijkplayer-example/bilibliplayer.ijkplayer-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ijkplayer-exo/bilibliplayer.ijkplayer-exo.iml" filepath="$PROJECT_DIR$/.idea/modules/ijkplayer-exo/bilibliplayer.ijkplayer-exo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ijkplayer-java/bilibliplayer.ijkplayer-java.iml" filepath="$PROJECT_DIR$/.idea/modules/ijkplayer-java/bilibliplayer.ijkplayer-java.iml" />
     </modules>
   </component>
 </project>

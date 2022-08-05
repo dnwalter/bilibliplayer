@@ -19,6 +19,7 @@ package tv.danmaku.ijk.media.example.application;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -32,6 +33,7 @@ import tv.danmaku.ijk.media.example.R;
 import tv.danmaku.ijk.media.example.activities.RecentMediaActivity;
 import tv.danmaku.ijk.media.example.activities.SampleMediaActivity;
 import tv.danmaku.ijk.media.example.activities.SettingsActivity;
+import tv.danmaku.ijk.media.example.activities.VideoNetActivity;
 
 @SuppressLint("Registered")
 public class AppActivity extends AppCompatActivity {
@@ -88,6 +90,8 @@ public class AppActivity extends AppCompatActivity {
             RecentMediaActivity.intentTo(this);
         } else if (id == R.id.action_sample) {
             SampleMediaActivity.intentTo(this);
+//            SampleMediaActivity.intentTo(this); todo ousy
+            startActivity(new Intent(this, VideoNetActivity.class));
         }
 
         return super.onOptionsItemSelected(item);

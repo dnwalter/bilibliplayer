@@ -339,16 +339,19 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
             mMediaPlayer.setOnTimedTextListener(mOnTimedTextListener);
             mCurrentBufferPercentage = 0;
             String scheme = mUri.getScheme();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
-                    mSettings.getUsingMediaDataSource() &&
-                    (TextUtils.isEmpty(scheme) || scheme.equalsIgnoreCase("file"))) {
-                IMediaDataSource dataSource = new FileMediaDataSource(new File(mUri.toString()));
-                mMediaPlayer.setDataSource(dataSource);
-            }  else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-                mMediaPlayer.setDataSource(mAppContext, mUri, mHeaders);
-            } else {
-                mMediaPlayer.setDataSource(mUri.toString());
-            }
+
+            mMediaPlayer.setDataSource(context, mUri);
+            // todo ousy
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
+//                    mSettings.getUsingMediaDataSource() &&
+//                    (TextUtils.isEmpty(scheme) || scheme.equalsIgnoreCase("file"))) {
+//                IMediaDataSource dataSource = new FileMediaDataSource(new File(mUri.toString()));
+//                mMediaPlayer.setDataSource(dataSource);
+//            }  else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+//                mMediaPlayer.setDataSource(mAppContext, mUri, mHeaders);
+//            } else {
+//                mMediaPlayer.setDataSource(mUri.toString());
+//            }
             bindSurfaceHolder(mMediaPlayer, mSurfaceHolder);
             mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             mMediaPlayer.setScreenOnWhilePlaying(true);
