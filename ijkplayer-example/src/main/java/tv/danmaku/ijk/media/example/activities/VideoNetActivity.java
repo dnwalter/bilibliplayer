@@ -24,6 +24,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import tv.danmaku.ijk.media.example.R;
 import tv.danmaku.ijk.media.example.widget.media.IjkVideoView;
+import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
 public class VideoNetActivity extends AppCompatActivity {
     IjkVideoView ijkVideoView;
@@ -32,6 +33,9 @@ public class VideoNetActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_net);
+        IjkMediaPlayer.loadLibrariesOnce(null);
+        IjkMediaPlayer.native_profileBegin("libijkplayer.so");
+
         ijkVideoView = (IjkVideoView) findViewById(R.id.video_view);
         ijkVideoView.setVideoURI(Uri.parse("https://ebofirmware.s3.ap-east-1.amazonaws.com/play-ebo/EBO%20SE/1-EBO%20SE-%E5%8C%85%E8%A3%85%E5%B1%95%E7%A4%BA.mp4"));
         ijkVideoView.start();
